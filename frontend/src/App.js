@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Blog from './components/Blog';
 
-function App() {
+function Home() {
   const projects = [
     {
       id: 1,
@@ -55,13 +57,13 @@ function App() {
             >
               Meus projetos
             </a>
-            <a 
-              href="#postagens" 
+            <Link 
+              to="/postagens" 
               className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
               data-testid="posts-link"
             >
               Postagens
-            </a>
+            </Link>
             <a 
               href="#sobre" 
               className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
@@ -122,6 +124,19 @@ function App() {
           © 2025 Cudigia C.F.F. Quinau. Todos os direitos reservados.
         </p>
       </footer>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/postagens" element={<Blog />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
