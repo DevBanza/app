@@ -139,6 +139,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/postagens" element={<Blog />} />
           <Route path="/postagens/:slug" element={<BlogPost />} />
+          <Route path="/projetos" element={<Projects />} />
+          <Route path="/sobre" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
