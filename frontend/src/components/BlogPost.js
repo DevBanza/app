@@ -235,9 +235,12 @@ function BlogPost() {
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
                   {/* Author Photo */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold" data-testid="author-photo">
-                      CCQ
-                    </div>
+                    <img 
+                      src="https://customer-assets.emergentagent.com/job_site-checker-21/artifacts/mlek659p_image.png" 
+                      alt="Cudigia C.F.F. Quinau" 
+                      className="w-24 h-24 rounded-full object-cover shadow-md"
+                      data-testid="author-photo"
+                    />
                   </div>
                   
                   {/* Author Name */}
