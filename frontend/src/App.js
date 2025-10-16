@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 
 function Home() {
   const projects = [
