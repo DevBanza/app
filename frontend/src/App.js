@@ -136,6 +136,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/postagens" element={<Blog />} />
+          <Route path="/postagens/:slug" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </div>
