@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import Projects from './components/Projects';
+import About from './components/About';
 
 function Home() {
   const projects = [
