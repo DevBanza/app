@@ -53,13 +53,13 @@ function Home() {
             >
               Me contrate
             </a>
-            <a 
-              href="#projetos" 
+            <Link 
+              to="/projetos" 
               className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
               data-testid="projects-link"
             >
               Meus projetos
-            </a>
+            </Link>
             <Link 
               to="/postagens" 
               className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
@@ -67,13 +67,13 @@ function Home() {
             >
               Postagens
             </Link>
-            <a 
-              href="#sobre" 
+            <Link 
+              to="/sobre" 
               className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
               data-testid="about-link"
             >
               Sobre
-            </a>
+            </Link>
           </div>
         </div>
       </section>
