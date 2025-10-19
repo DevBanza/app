@@ -54,7 +54,9 @@ function About() {
                 GitHub
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/cudigia-quinau-8a642b7b/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
                 data-testid="linkedin-link"
               >
