@@ -10,12 +10,17 @@ function BlogPost() {
       title: 'Implantação de um Ambiente Virtual Cliente/Servidor',
       date: 'Julho 31, 2021',
       tags: ['#linux', '#virtualização', '#servidor', '#cliente-servidor'],
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+      image: '/images/blog/img-002.png',
       content: [
         {
           type: 'section',
           title: 'Autores',
           content: 'Fabíola Gomes da Rocha, Marcelo Henrique S. dos Santos, Cudigia C.F.F. Quinau'
+        },
+        {
+          type: 'section',
+          title: 'Palavras-chave',
+          content: 'Arquitetura Cliente/Servidor, Virtualização, Software Livre, Linux'
         },
         {
           type: 'section',
@@ -30,7 +35,7 @@ function BlogPost() {
         {
           type: 'section',
           title: 'Softwares Utilizados',
-          content: 'VirtualBox - Software opensource, multi-plataforma para criar, gerenciar e executar máquinas virtuais. Linux Mint - sistema operacional baseado nas distribuições Ubuntu e Debian. Ubuntu Service LTS - Sistema operacional open source específico para servidores. Apache - servidor HTTP de código livre. MySQL - sistema gerenciador de banco de dados relacional. PHP - linguagem de script com suporte à orientação a objetos. Net-Tools - conjunto de ferramentas para administração de redes no Linux.'
+          content: 'VirtualBox - Software opensource, multi-plataforma para criar, gerenciar e executar máquinas virtuais.\n\nLinux Mint - sistema operacional baseado nas distribuições Ubuntu e Debian.\n\nUbuntu Service LTS - Sistema operacional open source específico para servidores.\n\nSnap Firefox - A versão mais recente do Mozilla Firefox disponível como pacote Snap.\n\nApache - servidor HTTP de código livre mantido pela Apache Software Foundation.\n\nMySQL - sistema gerenciador de banco de dados relacional desenvolvido pela Oracle.\n\nPHP - linguagem de script com suporte à orientação a objetos.\n\nNet-Tools - conjunto de ferramentas para administração de redes no Linux.'
         },
         {
           type: 'section',
@@ -40,22 +45,47 @@ function BlogPost() {
         {
           type: 'section',
           title: 'Sistemas Operacionais',
-          content: 'Para o servidor, utilizamos o Ubuntu Server 20.04 LTS com arquitetura de 64bits, por apresentar mais estabilidade e segurança. A máquina que atuou como cliente foi formatada com o Linux Mint 20.2 codinome "Uma", com o ambiente gráfico Xfce e arquitetura 64bits. Destinamos 2Gb de memória RAM e 20 Gb de armazenamento para cada VM.'
+          content: 'Para o servidor, utilizamos o Ubuntu Server 20.04 LTS com arquitetura de 64bits, por apresentar mais estabilidade e segurança. A máquina que atuou como cliente foi formatada com o Linux Mint 20.2 codinome "Uma", com o ambiente gráfico Xfce e arquitetura 64bits. Destinamos 2Gb de memória RAM e 20 Gb de armazenamento para cada VM.',
+          image: '/images/blog/img-000.png',
+          imageCaption: 'Figura 01 - Ambiente do Linux Mint'
+        },
+        {
+          type: 'section',
+          title: 'Construção do Ambiente',
+          content: 'Iniciamos a construção do ambiente a partir do VirtualBox. Nas configurações da ferramenta é possível definir quais recursos de hardware serão alocados para a máquina virtual, como memória RAM, armazenamento, configurações de rede e capacidade de processamento. As duas máquinas foram configuradas no modo Bridge. Durante o processo foi preciso instalar as ferramentas do pacote Net-Tools.',
+          image: '/images/blog/img-001.png',
+          imageCaption: 'Figura 02 - Configuração de rede do VirtualBox'
+        },
+        {
+          type: 'section',
+          title: 'Comandos Utilizados',
+          content: 'Comandos principais utilizados:\n\n• sudo apt update - atualizar repositórios\n• sudo apt-get install lamp-server^ phpmyadmin - instalar LAMP\n• sudo apt install openssh-server - instalar SSH\n• sudo service apache2 start - iniciar Apache\n• sudo service apache2 status - verificar status\n• ifconfig -a - listar placas de rede\n• sudo snap install firefox - instalar Firefox',
+          image: '/images/blog/img-003.png',
+          imageCaption: 'Figura 03 - Ambiente completo com máquinas cliente e servidor'
         },
         {
           type: 'section',
           title: 'Protocolo SSH',
-          content: 'Realizamos uma conexão entre as máquinas utilizando o protocolo SSH (Secure Shell). O SSH é um protocolo que garante que cliente e servidor remoto troquem informações de maneira segura e dinâmica. O processo é capaz de criptografar os arquivos enviados ao diretório do servidor, garantindo que alterações e o envio de dados sejam realizados da melhor forma.'
+          content: 'Realizamos uma conexão entre as máquinas utilizando o protocolo SSH (Secure Shell). O SSH é um protocolo que garante que cliente e servidor remoto troquem informações de maneira segura e dinâmica. O processo é capaz de criptografar os arquivos enviados ao diretório do servidor, garantindo que alterações e o envio de dados sejam realizados da melhor forma.',
+          image: '/images/blog/img-004.png',
+          imageCaption: 'Figura 04 - Acesso remoto ao ambiente servidor via SSH'
         },
         {
           type: 'section',
           title: 'Aplicação Web de Exemplo',
-          content: 'Para as requisições HTTP, uma página serviu como exemplo deste tipo de serviço. O arquivo index.html (/var/www/html/index.html) foi editado e usado como exemplo de uma solicitação via browser que retorna do servidor. Na simulação, foi possível através do acesso remoto da máquina cliente e com o Snap Firefox, o direcionamento das informações para o navegador.'
+          content: 'Para as requisições HTTP, uma página serviu como exemplo deste tipo de serviço. O arquivo index.html (/var/www/html/index.html) foi editado e usado como exemplo de uma solicitação via browser que retorna do servidor. Na simulação, foi possível através do acesso remoto da máquina cliente e com o Snap Firefox, o direcionamento das informações para o navegador.',
+          image: '/images/blog/img-006.png',
+          imageCaption: 'Figura 05 - Criação de arquivos e acesso a uma aplicação web'
         },
         {
           type: 'section',
           title: 'Conclusão',
-          content: 'Uma aplicação cliente servidor é um sistema projetado pautando na utilização em ambientes como navegador, através da internet bem como de um aplicativo desenvolvido utilizando tecnologias do lado cliente. Com a execução desta tarefa, tivemos a oportunidade de consolidar boa parte do conhecimento adquirido na disciplina em uma única atividade. Compreendemos e concluímos que um projeto de software livre pode se afirmar como uma tecnologia de ponta.'
+          content: 'Em suma, entendemos que uma aplicação cliente servidor é um sistema projetado pautando na utilização em ambientes como navegador, através da internet bem como de um aplicativo desenvolvido utilizando tecnologias do lado cliente. Com a execução desta tarefa, tivemos a oportunidade de consolidar boa parte do conhecimento adquirido na disciplina em uma única atividade. Compreendemos e concluímos que um projeto de software livre pode se afirmar como uma tecnologia de ponta.'
+        },
+        {
+          type: 'section',
+          title: 'Referências',
+          content: '• Aplicação Web: https://pt.wikipedia.org/wiki/Aplicação_web\n• Guia de Instalação do Linux Mint: https://linuxmint-installation-guide.readthedocs.io/pt_BR/latest/\n• Manual do PHP: https://www.php.net/manual/en/intro-whatis.php\n• Apache Foundation: https://www.apache.org/foundation/\n• MySQL Oracle: https://www.oracle.com/br/mysql/\n• Ubuntu Server: https://ubuntu.com/download/server\n• IBM - What is Virtualization?: https://www.ibm.com/cloud/learn/virtualization-a-complete-guide'
         }
       ]
     },
