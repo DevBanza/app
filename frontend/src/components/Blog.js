@@ -101,14 +101,6 @@ function Blog() {
     }
   ];
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
-        <div className="text-xl text-gray-600 dark:text-gray-300">Carregando postagens...</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       {/* Header with back button */}
@@ -128,42 +120,9 @@ function Blog() {
       {/* Blog Section */}
       <section className="container mx-auto px-4 pb-20">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white" data-testid="blog-title">
-              Blog
-            </h1>
-            
-            <Link
-              to="/postagens/nova"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold shadow-md hover:shadow-lg"
-              data-testid="create-post-button"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
-              Nova Postagem
-            </Link>
-          </div>
-
-          {error && (
-            <div className="mb-8 p-4 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-200 rounded-lg" data-testid="error-message">
-              {error}
-            </div>
-          )}
-
-          {posts.length === 0 && !error && (
-            <div className="text-center py-12" data-testid="no-posts-message">
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
-                Nenhuma postagem ainda.
-              </p>
-              <Link
-                to="/postagens/nova"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
-              >
-                Criar primeira postagem
-              </Link>
-            </div>
-          )}
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-16" data-testid="blog-title">
+            Blog
+          </h1>
           
           {/* Blog Posts List */}
           {posts.length > 0 && (
