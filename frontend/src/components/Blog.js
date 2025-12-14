@@ -20,7 +20,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800'
     },
     {
-      id: 2,
+      id: 3,
       date: 'Dezembro 10, 2024',
       title: 'Análise de sistemas: Melhores práticas',
       tags: ['#analise', '#sistemas'],
