@@ -139,6 +139,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/postagens" element={<Blog />} />
+          <Route path="/postagens/nova" element={<CreatePost />} />
+          <Route path="/postagens/editar/:id" element={<CreatePost />} />
           <Route path="/postagens/:slug" element={<BlogPost />} />
           <Route path="/projetos" element={<Projects />} />
           <Route path="/sobre" element={<About />} />
