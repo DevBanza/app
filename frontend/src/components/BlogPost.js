@@ -81,7 +81,7 @@ function BlogPost() {
           {/* Post Header */}
           <header className="mb-12">
             <time className="text-sm text-gray-500 dark:text-gray-400 mb-4 block" data-testid="post-date">
-              {post.date}
+              {formatDate(post.date)}
             </time>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6" data-testid="post-title">
               {post.title}
@@ -93,24 +93,29 @@ function BlogPost() {
                   className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
                   data-testid={`post-tag-${index}`}
                 >
-                  {tag}
+                  #{tag}
                 </span>
               ))}
             </div>
           </header>
 
+          {/* Post Image */}
+          {post.image_url && (
+            <div className="mb-8">
+              <img 
+                src={post.image_url} 
+                alt={post.title}
+                className="w-full rounded-lg shadow-lg"
+                data-testid="post-image"
+              />
+            </div>
+          )}
+
           {/* Post Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none" data-testid="post-content">
-            {post.content.map((section, index) => (
-              <section key={index} className="mb-10" data-testid={`post-section-${index}`}>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  {section.title}
-                </h2>
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {section.content}
-                </p>
-              </section>
-            ))}
+            <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">
+              {post.content}
+            </div>
           </div>
 
               {/* Back to blog link at bottom */}
