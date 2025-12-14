@@ -6,6 +6,59 @@ function BlogPost() {
 
   // Database de posts completos
   const postsContent = {
+    'implantacao-ambiente-virtual-cliente-servidor': {
+      title: 'Implantação de um Ambiente Virtual Cliente/Servidor',
+      date: 'Julho 31, 2021',
+      tags: ['#linux', '#virtualização', '#servidor', '#cliente-servidor'],
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+      content: [
+        {
+          type: 'section',
+          title: 'Autores',
+          content: 'Fabíola Gomes da Rocha, Marcelo Henrique S. dos Santos, Cudigia C.F.F. Quinau'
+        },
+        {
+          type: 'section',
+          title: 'Introdução',
+          content: 'Descrevemos em detalhes a implementação de um ambiente voltado ao desenvolvimento de aplicações web, baseada na arquitetura cliente servidor. Para a execução da tarefa foi utilizada tecnologia de virtualização, com auxílio do software VirtualBox. Criamos duas máquinas virtuais, uma atuando como cliente e outra como servidor. Escolhemos instalar duas distribuições GNU/Linux, sendo Linux Mint para o cliente, e Ubuntu Server para o servidor.'
+        },
+        {
+          type: 'section',
+          title: 'Configuração do Ambiente',
+          content: 'Com as configurações das máquinas virtuais concluídas, instalamos ainda pacote LAMP no servidor, que fornece a pilha de softwares necessária para a implantação de um servidor web completo, incluindo um servidor HTTP, um sistema gerenciador de banco de dados e uma linguagem de programação Back-end. Realizamos então a conexão entre o cliente e o servidor, utilizando o protocolo SSH, de modo a permitir o acesso de uma máquina cliente aos recursos e funcionalidade do servidor.'
+        },
+        {
+          type: 'section',
+          title: 'Softwares Utilizados',
+          content: 'VirtualBox - Software opensource, multi-plataforma para criar, gerenciar e executar máquinas virtuais. Linux Mint - sistema operacional baseado nas distribuições Ubuntu e Debian. Ubuntu Service LTS - Sistema operacional open source específico para servidores. Apache - servidor HTTP de código livre. MySQL - sistema gerenciador de banco de dados relacional. PHP - linguagem de script com suporte à orientação a objetos. Net-Tools - conjunto de ferramentas para administração de redes no Linux.'
+        },
+        {
+          type: 'section',
+          title: 'Ambiente de Virtualização',
+          content: 'Um dos recursos essenciais para a execução deste trabalho é a tecnologia de virtualização que pode ser definida como uma técnica que permite criar uma camada de abstração sobre o hardware de um computador e compartilhar seus recursos com múltiplos outros computadores virtuais independentes, chamados de Máquinas Virtuais (VM). Os recursos do computador hospedeiro são geridos por um sistema chamado Hypervision.'
+        },
+        {
+          type: 'section',
+          title: 'Sistemas Operacionais',
+          content: 'Para o servidor, utilizamos o Ubuntu Server 20.04 LTS com arquitetura de 64bits, por apresentar mais estabilidade e segurança. A máquina que atuou como cliente foi formatada com o Linux Mint 20.2 codinome "Uma", com o ambiente gráfico Xfce e arquitetura 64bits. Destinamos 2Gb de memória RAM e 20 Gb de armazenamento para cada VM.'
+        },
+        {
+          type: 'section',
+          title: 'Protocolo SSH',
+          content: 'Realizamos uma conexão entre as máquinas utilizando o protocolo SSH (Secure Shell). O SSH é um protocolo que garante que cliente e servidor remoto troquem informações de maneira segura e dinâmica. O processo é capaz de criptografar os arquivos enviados ao diretório do servidor, garantindo que alterações e o envio de dados sejam realizados da melhor forma.'
+        },
+        {
+          type: 'section',
+          title: 'Aplicação Web de Exemplo',
+          content: 'Para as requisições HTTP, uma página serviu como exemplo deste tipo de serviço. O arquivo index.html (/var/www/html/index.html) foi editado e usado como exemplo de uma solicitação via browser que retorna do servidor. Na simulação, foi possível através do acesso remoto da máquina cliente e com o Snap Firefox, o direcionamento das informações para o navegador.'
+        },
+        {
+          type: 'section',
+          title: 'Conclusão',
+          content: 'Uma aplicação cliente servidor é um sistema projetado pautando na utilização em ambientes como navegador, através da internet bem como de um aplicativo desenvolvido utilizando tecnologias do lado cliente. Com a execução desta tarefa, tivemos a oportunidade de consolidar boa parte do conhecimento adquirido na disciplina em uma única atividade. Compreendemos e concluímos que um projeto de software livre pode se afirmar como uma tecnologia de ponta.'
+        }
+      ]
+    },
     'criar-aplicacoes-desktop-modernas': {
       title: 'Como criar aplicações desktop modernas',
       date: 'Dezembro 15, 2024',
