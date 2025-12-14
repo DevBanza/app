@@ -28,7 +28,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800'
     },
     {
-      id: 3,
+      id: 4,
       date: 'Dezembro 5, 2024',
       title: 'Introdução ao desenvolvimento full-stack',
       tags: ['#fullstack', '#web'],
@@ -36,7 +36,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800'
     },
     {
-      id: 4,
+      id: 5,
       date: 'Novembro 28, 2024',
       title: 'Design patterns em programação orientada a objetos',
       tags: ['#oop', '#patterns'],
@@ -44,7 +44,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800'
     },
     {
-      id: 5,
+      id: 6,
       date: 'Novembro 20, 2024',
       title: 'Otimização de performance em aplicações',
       tags: ['#performance', '#otimizacao'],
@@ -52,7 +52,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'
     },
     {
-      id: 6,
+      id: 7,
       date: 'Novembro 15, 2024',
       title: 'Testes automatizados: Por onde começar',
       tags: ['#testes', '#qa'],
@@ -60,7 +60,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800'
     },
     {
-      id: 7,
+      id: 8,
       date: 'Novembro 8, 2024',
       title: 'Arquitetura de software: Conceitos fundamentais',
       tags: ['#arquitetura', '#software'],
@@ -68,7 +68,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800'
     },
     {
-      id: 8,
+      id: 9,
       date: 'Novembro 1, 2024',
       title: 'Git e GitHub: Guia completo para iniciantes',
       tags: ['#git', '#versionamento'],
@@ -76,7 +76,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800'
     },
     {
-      id: 9,
+      id: 10,
       date: 'Outubro 25, 2024',
       title: 'APIs RESTful: Construindo serviços escaláveis',
       tags: ['#api', '#rest'],
@@ -84,7 +84,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800'
     },
     {
-      id: 10,
+      id: 11,
       date: 'Outubro 18, 2024',
       title: 'Segurança em aplicações web',
       tags: ['#seguranca', '#web'],
@@ -92,7 +92,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800'
     },
     {
-      id: 11,
+      id: 12,
       date: 'Outubro 10, 2024',
       title: 'Banco de dados: SQL vs NoSQL',
       tags: ['#database', '#sql'],
@@ -100,7 +100,7 @@ function Blog() {
       image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800'
     },
     {
-      id: 12,
+      id: 13,
       date: 'Outubro 3, 2024',
       title: 'Clean Code: Escrevendo código limpo e legível',
       tags: ['#cleancode', '#boas-praticas'],
