@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function BlogPost() {
   const { slug } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
+
+  useEffect(() => {
+    loadPost();
+  }, [slug]);
+
+  const loadPost = async () => {
+    try {
+      const response = await axios.get(`${backendUrl}/api/posts/slug/${slug}`);
+      setPost(response.data);
+    } catch (err) {
+      setError('Post não encontrado');
+      console.error('Error loading post:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('pt-BR', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
 
   // Database de posts completos
   const postsContent = {
