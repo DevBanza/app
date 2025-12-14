@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import CreatePost from './components/CreatePost';
 import Projects from './components/Projects';
 import About from './components/About';
 
