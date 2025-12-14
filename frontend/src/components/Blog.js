@@ -1,52 +1,105 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
-
-  const loadPosts = async () => {
-    try {
-      const response = await axios.get(`${backendUrl}/api/posts`);
-      setPosts(response.data);
-    } catch (err) {
-      setError('Erro ao carregar postagens');
-      console.error('Error loading posts:', err);
-    } finally {
-      setLoading(false);
+  const posts = [
+    {
+      id: 1,
+      date: 'Dezembro 15, 2024',
+      title: 'Como criar aplicações desktop modernas',
+      tags: ['#desktop', '#desenvolvimento'],
+      slug: 'criar-aplicacoes-desktop-modernas',
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800'
+    },
+    {
+      id: 2,
+      date: 'Dezembro 10, 2024',
+      title: 'Análise de sistemas: Melhores práticas',
+      tags: ['#analise', '#sistemas'],
+      slug: 'analise-sistemas-melhores-praticas',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800'
+    },
+    {
+      id: 3,
+      date: 'Dezembro 5, 2024',
+      title: 'Introdução ao desenvolvimento full-stack',
+      tags: ['#fullstack', '#web'],
+      slug: 'introducao-desenvolvimento-fullstack',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800'
+    },
+    {
+      id: 4,
+      date: 'Novembro 28, 2024',
+      title: 'Design patterns em programação orientada a objetos',
+      tags: ['#oop', '#patterns'],
+      slug: 'design-patterns-poo',
+      image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800'
+    },
+    {
+      id: 5,
+      date: 'Novembro 20, 2024',
+      title: 'Otimização de performance em aplicações',
+      tags: ['#performance', '#otimizacao'],
+      slug: 'otimizacao-performance-aplicacoes',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'
+    },
+    {
+      id: 6,
+      date: 'Novembro 15, 2024',
+      title: 'Testes automatizados: Por onde começar',
+      tags: ['#testes', '#qa'],
+      slug: 'testes-automatizados-comecar',
+      image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800'
+    },
+    {
+      id: 7,
+      date: 'Novembro 8, 2024',
+      title: 'Arquitetura de software: Conceitos fundamentais',
+      tags: ['#arquitetura', '#software'],
+      slug: 'arquitetura-software-conceitos',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800'
+    },
+    {
+      id: 8,
+      date: 'Novembro 1, 2024',
+      title: 'Git e GitHub: Guia completo para iniciantes',
+      tags: ['#git', '#versionamento'],
+      slug: 'git-github-guia-iniciantes',
+      image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800'
+    },
+    {
+      id: 9,
+      date: 'Outubro 25, 2024',
+      title: 'APIs RESTful: Construindo serviços escaláveis',
+      tags: ['#api', '#rest'],
+      slug: 'apis-restful-servicos-escalaveis',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800'
+    },
+    {
+      id: 10,
+      date: 'Outubro 18, 2024',
+      title: 'Segurança em aplicações web',
+      tags: ['#seguranca', '#web'],
+      slug: 'seguranca-aplicacoes-web',
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800'
+    },
+    {
+      id: 11,
+      date: 'Outubro 10, 2024',
+      title: 'Banco de dados: SQL vs NoSQL',
+      tags: ['#database', '#sql'],
+      slug: 'banco-dados-sql-nosql',
+      image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800'
+    },
+    {
+      id: 12,
+      date: 'Outubro 3, 2024',
+      title: 'Clean Code: Escrevendo código limpo e legível',
+      tags: ['#cleancode', '#boas-praticas'],
+      slug: 'clean-code-codigo-limpo',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800'
     }
-  };
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('pt-BR', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-  const handleDelete = async (postId) => {
-    if (!window.confirm('Tem certeza que deseja deletar esta postagem?')) {
-      return;
-    }
-
-    try {
-      await axios.delete(`${backendUrl}/api/posts/${postId}`);
-      loadPosts(); // Reload posts after deletion
-    } catch (err) {
-      alert('Erro ao deletar postagem');
-      console.error('Error deleting post:', err);
-    }
-  };
+  ];
 
   if (loading) {
     return (
