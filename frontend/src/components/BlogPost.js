@@ -14,8 +14,8 @@ function BlogPost() {
       content: [
         {
           type: 'section',
-          title: 'Autores',
-          content: 'Fabíola Gomes da Rocha, Marcelo Henrique S. dos Santos, Cudigia C.F.F. Quinau'
+          title: 'Autor',
+          content: 'Cudigia C.F.F. Quinau'
         },
         {
           type: 'section',
