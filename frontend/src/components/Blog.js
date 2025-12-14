@@ -9,7 +9,7 @@ function Blog() {
       title: 'Implantação de um Ambiente Virtual Cliente/Servidor',
       tags: ['#linux', '#virtualização', '#servidor', '#cliente-servidor'],
       slug: 'implantacao-ambiente-virtual-cliente-servidor',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800'
+      image: '/images/blog/img-002.png'
     },
     {
       id: 2,
