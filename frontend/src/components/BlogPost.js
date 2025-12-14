@@ -306,9 +306,26 @@ function BlogPost() {
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   {section.title}
                 </h2>
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                   {section.content}
                 </p>
+                
+                {/* Section Image */}
+                {section.image && (
+                  <div className="mt-6 mb-6">
+                    <img 
+                      src={section.image} 
+                      alt={section.imageCaption || section.title}
+                      className="w-full rounded-lg shadow-lg"
+                      data-testid={`section-image-${index}`}
+                    />
+                    {section.imageCaption && (
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center italic">
+                        {section.imageCaption}
+                      </p>
+                    )}
+                  </div>
+                )}
               </section>
             ))}
           </div>
