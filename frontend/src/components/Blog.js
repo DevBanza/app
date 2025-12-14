@@ -5,6 +5,14 @@ function Blog() {
   const posts = [
     {
       id: 1,
+      date: 'Julho 31, 2021',
+      title: 'Implantação de um Ambiente Virtual Cliente/Servidor',
+      tags: ['#linux', '#virtualização', '#servidor', '#cliente-servidor'],
+      slug: 'implantacao-ambiente-virtual-cliente-servidor',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800'
+    },
+    {
+      id: 2,
       date: 'Dezembro 15, 2024',
       title: 'Como criar aplicações desktop modernas',
       tags: ['#desktop', '#desenvolvimento'],
